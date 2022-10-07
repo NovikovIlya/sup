@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
     
 </head>
 <body>
@@ -140,6 +141,7 @@
         <section class="technology">
             <div class="container">
                 <div class="technology__inner">
+                    <div id="bgndVideo" class="player" data-property="{videoURL:'http://youtu.be/BsekcY04xvQ',containment:'body',autoPlay:true, mute:true, startAt:0, opacity:1}">My video</div>
                     <button class="popup-btn technology-btn"><svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M52.6733 34.5L26.1634 49.6554V19.3446L52.6733 34.5Z" fill="white"/>
                         <circle cx="35" cy="35" r="34" stroke="white" stroke-width="2"/>
@@ -217,4 +219,7 @@
         </section>
     </footer>
 </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="jquery.mb.YTPlayer-master/dist/jquery.mb.YTPlayer.js"></script>
+<!-- <script src="inc/jquery.mb.YTPlayer.js"></script> -->
 </html>
