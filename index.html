@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+
     
 </head>
 <body>
@@ -44,15 +44,17 @@
     </header>
     <main class="main">
         <section class="info">
+            <!-- <video class="videos_one" src="sups2.mp4" autoplay muted loop id="video"></video>
+             -->
+             <div class="video-container">
+                <iframe width="1920" height="315" src="https://www.youtube.com/embed/Zw66jd_5ws0?&autoplay=1&mute=1&playsinline=1&playlist=Zw66jd_5ws0&loop=1" ></iframe>
+            </div> 
             <div class="container">
                 <div class="info__inner">
                     <div class="info__top">
                         <p class="info__top-text">After our well received Fly Air Pocket Edition we’re adding the respective touring iSUP to our Range – the Ray Air Pocket Edition! The ultra travel-friendly touring iSUP is built in a tough but light construction that allows it to be packed into a backpack half the size of a regular iSUP.
-                            <button class="popup-btn info-btn"><svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M52.6733 34.5L26.1634 49.6554V19.3446L52.6733 34.5Z" fill="white"/>
-                                <circle cx="35" cy="35" r="34" stroke="white" stroke-width="2"/>
-                                </svg>
-                                <span>Play  video</span></button>
+                            <button  class="fa-fa-pause"  id="btn" onclick="myFunction()"> Pause</button>
+                            
                         </p>
                         <p class="info__top-text">With a thinner deck pad and tough but flexible construction, the Ray Air Pocket Edition can be rolled and packed into a much narrower bag, making it extremely easy to store and transport. Based on our highly versatile Ray Air 11’6’’, the efficient shape is packed with volume - offering safe, stable paddling and superb glide – which makes it the perfect iSUP for everyone paddling some distance. With its minimal weight and dimensions nothing comes close the convenient handling of our Pocket Edition iSUPs!</p>
                         <img class="info__top-img" src="img/main_sup.png" alt="">
@@ -102,6 +104,7 @@
                 </div>
             </div>
         </section>
+        
         <section class="buy">
             <div class="container">
                 <div class="buy__inner">
@@ -139,10 +142,12 @@
             </div>
         </section>
         <section class="technology">
+            <div class="video-container">
+                <iframe width="1920" height="315" src="https://www.youtube.com/embed/PwASkDsVUTo?&autoplay=1&mute=1&playsinline=1&playlist=PwASkDsVUTo&loop=1" ></iframe>
+            </div>
             <div class="container">
-                <div class="technology__inner">
-                    <div id="bgndVideo" class="player" data-property="{videoURL:'http://youtu.be/BsekcY04xvQ',containment:'body',autoPlay:true, mute:true, startAt:0, opacity:1}">My video</div>
-                    <button class="popup-btn technology-btn"><svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="technology__inner"  >
+                    <button class="popup-btn technology-btn"  ><svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M52.6733 34.5L26.1634 49.6554V19.3446L52.6733 34.5Z" fill="white"/>
                         <circle cx="35" cy="35" r="34" stroke="white" stroke-width="2"/>
                         </svg>
@@ -183,6 +188,7 @@
             </div>
         </section>
     </main>
+    
     <footer class="footer">
         <section class="contact">
             <div class="container">
@@ -220,6 +226,19 @@
     </footer>
 </body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-<script src="jquery.mb.YTPlayer-master/dist/jquery.mb.YTPlayer.js"></script>
-<!-- <script src="inc/jquery.mb.YTPlayer.js"></script> -->
+<script src="js/jquery.vide.js"></script>
+<script>
+    var vid = document.getElementById('video');
+    var btn = document.getElementById('btn');
+
+    function myFunction() {
+        if (vid.paused) {
+            vid.play();
+            btn.innerHTML = '</i> Pause';
+        } else {
+            vid.pause();
+            btn.innerHTML = '<i class="fa-fa-play" aria-hidden="true"></i> Play';
+        }
+    }
+</script>
 </html>
